@@ -1,0 +1,22 @@
+{
+  "name": "ecommerce-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tomtom99lol/ecommerce-app.git"
+  },
+  "author": "Tom",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tomtom99lol/ecommerce-app/issues"
+  },
+  "homepage": "https://github.com/tomtom99lol/ecommerce-app#readme",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
