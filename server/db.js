@@ -198,7 +198,7 @@ const addCartToOrder = (req, res, next) =>{
 			if (err){
 				throw err;
 			}
-			res.locals.msg.push(`Order created with ID: ${results.rows[0].id} fpr user with ID: ${id}`);
+			res.locals.msg.push(`Order created with ID: ${results.rows[0].id} for user with ID: ${id}`);
 			res.status(200).send(res.locals.msg.join('\n'));
 		} 
 	)
