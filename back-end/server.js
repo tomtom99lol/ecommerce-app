@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
 const db = require('./server/db');
+
 const cors = require('cors');
 
 
@@ -17,6 +18,8 @@ app.use(cors());
 app.get('/', (request, response) => {
     response.json({ info: 'Node.js, Express, and Postgres API' })
 });
+
+//console.log(ProductsArray);
   
 app.get('/users', db.getUsers);
 app.get('/users/:id', db.getUserById);
@@ -79,12 +82,13 @@ passport.use(new LocalStrategy(
         )
     }
 ));
-
+app.get('/login');
 app.post(
   '/login',
   passport.authenticate('local', {failureRedirect: '/'}),
   (req, res) => {res.redirect(`/users/${req.user.id}`)}
 );
+
 
 /*app.get('/profile', (req, res) =>{
   res.json()
@@ -93,3 +97,17 @@ app.post(
 app.listen(4001, () =>{
     console.log('Port 4001 is up and running');
 });
+
+
+
+/*const prod = require('./getAllProducts');
+
+const products = prod.bigFunc()
+.then(
+  (results) => {
+    //console.log(results)
+    return results;
+  }  
+);*/
+
+
